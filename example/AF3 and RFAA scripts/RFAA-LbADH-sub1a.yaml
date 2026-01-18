@@ -1,0 +1,13 @@
+defaults:
+- base
+job_name: LbADH-WT-sub1a
+protein_inputs:
+  A:
+    fasta_file: WT.fasta
+sm_inputs:
+  B:
+    input: NADPH.sdf
+    input_type: sdf
+  C:
+    input: sub1a.sdf
+    input_type: sdf

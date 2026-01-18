@@ -1,0 +1,31 @@
+{
+    "name": "RS-2a",
+    "modelSeeds": [1],
+    "dialect": "alphafold3",
+    "version": 1,
+    "sequences": 
+    [
+        {
+        "protein": 
+        {
+            "id": "A",
+            "sequence": "SNRLDGKVAIITGGTLGIGLAIATKFVEEGAKVMITGRHSDVGEKAAKSVGTPDQIQFFQHDSSDEDGWTKLFDATEKAFGPVSTLVNNAGIAVNKSVEETTTAEWRKLLAVNLDGVFFGTRLGIQRMKNKGLGASIINMSSIEGFVGDPSLGAYNASKGAVRIMSKSAALDCALKDYDVRVNTVHPGYIKTPLVDDLPGAEEAMSQRTKTPMGHIGEPNDIAYICVYLASNESKFATGSEFVVDGGYTAQ"
+        }
+        },
+        {
+        "ligand": 
+        {
+            "id": "B",
+            "smiles": "C1C=CN(C=C1C(=O)N)[C@H]2[C@@H]([C@@H]([C@H](O2)COP(=O)(O)OP(=O)(O)OC[C@@H]3[C@H]([C@H]([C@@H](O3)N4C=NC5=C(N=CN=C54)N)OP(=O)(O)O)O)O)O"
+        }
+        },
+        {
+        "ligand": 
+        {
+            "id": "C",
+            "smiles": "C[C@@]1(C(CC[C@@H]1O)=O)CC2=CC=CC=C2"
+        }
+        }
+    ]
+}
+   
