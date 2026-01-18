@@ -21,11 +21,11 @@ This package is tested with Python 3.10.16 and CUDA 12.8 on Ubuntu 22.04.
 **Step 1. Preparation**
 
 This step prepares the required sequence and structure inputs for downstream feature extraction and machine learning.
-Prepare a CSV file, such as one in the example folder, specifying mutation information and labels.
+Prepare a CSV file, such as one in the **data/** folder, specifying mutation information and labels.
 Generate protein sequences using the script:
 
 ```
-python 0-genesequences_fromcsv.py \
+python scripts/genesequences_from_csv.py \
     --input mutations.csv \
     --fasta wildtype.fasta \
     --output sequences.csv
