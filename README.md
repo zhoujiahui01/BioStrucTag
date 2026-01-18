@@ -45,6 +45,7 @@ python scripts/activesiteextract.py \
 ```
 
 The extraction procedure consists of three steps:
+
 1.1 Structural alignment
 
 All input structures are aligned using PyMOL, and the aligned structures are saved to: **data/alignment/**
@@ -55,6 +56,7 @@ For each aligned structure, only atoms within a cubic box centered at a user-spe
 The box size is fixed at 20 × 20 × 20 Å, corresponding to ±10 Å along each Cartesian axis. 
 
 1.3 Output generation
+
 The cropped active-site structures are saved in PDB format to: **data/activesite/**
 
 
