@@ -98,7 +98,7 @@ python scripts/prediction.py \
 
 Predicted values will be saved to outputs-test/predictions.csv
 
-**Directory Structure **
+**Directory Structure**
 
 ```
 BioStrucTag/
@@ -118,4 +118,9 @@ BioStrucTag/
 ├─ models/               # trained models
 └─ scripts/              # all Python scripts
 ```
+
+# Contact
+Jiahui Zhou (jiahui.zhou@qub.ac.uk) Queen's University Belfast, UK
+
+Meilan Huang (m.huang@qub.ac.uk) Queen's University Belfast, UK
 
