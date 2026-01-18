@@ -2,7 +2,12 @@
 <img width="947" height="361" alt="image" src="https://github.com/user-attachments/assets/4ed53a57-0919-4a16-919e-b80a19de9f0f" />
 
 # Introduction
-Although FRISM efficiently generates high-quality variants by targeting rationally selected hotspots, the number of possible mutants increases exponentially as the number of mutable positions expands. To address this combinatorial explosion, we developed a complex structure-based machine learning framework, BioStrucTag, which integrates enzyme sequence features with voxelized three-dimensional representations of the active pocket binding environment. Trained on experimental stereoselectivity data from initial FRISM libraries, **BioStrucTag** enables efficient prioritization of promising variants for experimental validation through an iterative active-learning workflow.
+The number of possible mutants increasesexponentially as the number of mutablepositions expands. To address this combinatorial explosion, we developed a complex structure-based machine learning framework, **BioStrucTag**, which integrates enzyme sequence features with voxelized three-dimensional representations of the active pocket binding environment. Trained on experimental stereoselectivity data from initial FRISM libraries, BioStrucTag enables efficient prioritization of promising variants for experimental validation through an iterative active-learning workflow.
+
+**BioStrucTag is developed by QUB Huang Group : https://www.huanggroup.co.uk/**
+
+**Find more AI tools in our enzyme design platform (LEAD-Zyme): https://www.greencatalysis.co.uk/lead-zyme**
+
 
 # Required Dependencies
 This package is tested with Python 3.10.16 and CUDA 12.8 on Ubuntu 22.04.
@@ -41,12 +46,17 @@ python scripts/activesiteextract.py \
 
 The extraction procedure consists of three steps:
 1.1 Structural alignment
+
 All input structures are aligned using PyMOL, and the aligned structures are saved to: **data/alignment/**
+
 1.2 Active-site cropping
+
 For each aligned structure, only atoms within a cubic box centered at a user-specified coordinate are retained.
 The box size is fixed at 20 × 20 × 20 Å, corresponding to ±10 Å along each Cartesian axis. 
+
 1.3 Output generation
 The cropped active-site structures are saved in PDB format to: **data/activesite/**
+
 
 **Step 2. Feature Generation**
 
@@ -108,3 +118,4 @@ BioStrucTag/
 ├─ models/               # trained models
 └─ scripts/              # all Python scripts
 ```
+
