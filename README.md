@@ -2,7 +2,7 @@
 <img width="947" height="361" alt="image" src="https://github.com/user-attachments/assets/4ed53a57-0919-4a16-919e-b80a19de9f0f" />
 
 # Introduction
-The number of possible mutants increases exponentially as the number of mutable positions expands. To address this combinatorial explosion, we developed a complex structure-based machine learning framework, **BioStrucTag**, which integrates enzyme sequence features with voxelized three-dimensional representations of the active pocket binding environment. Trained on experimental stereoselectivity data from initial FRISM libraries, BioStrucTag enables efficient prioritization of promising variants for experimental validation through an iterative active-learning workflow.
+The number of possible mutants increases exponentially as the number of mutable positions expands. To address this combinatorial explosion, we developed a complex structure-based machine learning framework, **BioStrucTag**, which integrates enzyme sequence features with voxelized three-dimensional representations of the active pocket binding environment. Trained on experimental stereoselectivity data, BioStrucTag enables efficient prioritization of promising variants for experimental validation through an iterative active-learning workflow.
 
 **BioStrucTag is developed by QUB Huang Group : https://www.huanggroup.co.uk/**
 
