@@ -2,7 +2,7 @@
 <img width="947" height="361" alt="image" src="https://github.com/user-attachments/assets/4ed53a57-0919-4a16-919e-b80a19de9f0f" />
 
 # Introduction
-The number of possible mutants increases exponentially as the number of mutable positions expands. To address this combinatorial explosion, we developed a complex structure-based machine learning framework, **BioStrucTag**, which integrates enzyme sequence features with voxelized three-dimensional representations of the active pocket binding environment. Trained on experimental stereoselectivity data, BioStrucTag enables efficient prioritization of promising variants for experimental validation through an iterative active-learning workflow.
+The number of possible mutants increases exponentially as the number of mutable positions expands. To address this combinatorial explosion, we developed  **BioStrucTag**, a structure-based machine learning framework,which integrates enzyme sequence features with voxelized three-dimensional representations of substrate binding environment in the active pocket. Trained on experimental stereoselectivity data, BioStrucTag efficiently prioritizes promising variants for experimental validation through an iterative active-learning workflow.
 
 **BioStrucTag is developed by QUB Huang Group : https://www.huanggroup.co.uk/**
 
@@ -25,8 +25,8 @@ This package is tested with Python 3.10.16 and CUDA 12.8 on Ubuntu 22.04.
 # Usage
 **Step 1. Preparation**
 
-This step prepares the required sequence and structure inputs for downstream feature extraction and machine learning.
-Prepare a CSV file, such as one in the **data/** folder, specifying mutation information and labels.
+Prepares the required sequence and structure inputs for feature extraction and machine learning.
+Prepare a CSV file, and save it in the `data/` folder, specifying mutation information and labels.
 Generate protein sequences using the script:
 
 ```
@@ -36,8 +36,8 @@ python scripts/genesequences_from_csv.py \
     --output sequences.csv
 ```
 
-All protein structures (.pdb format) should be placed in** data/structures/** . We recommend using AF3 to generate the script. The script is attached in the **example/** folder.
-Generate active site structures using the script:
+All protein structures (.pdb format) should be placed in `data/structures/`. The structures are generated using AlphaFold3. The script is attached in the `example/` folder.
+The active site structures are generated using the script below:
 
 ```
 python scripts/activesiteextract.py \
@@ -48,16 +48,16 @@ The extraction procedure consists of three steps:
 
 1.1 Structural alignment
 
-All input structures are aligned using PyMOL, and the aligned structures are saved to: **data/alignment/**
+All input structures are aligned using PyMOL, and the aligned structures are saved in:  `data/alignment/`
 
 1.2 Active-site cropping
 
 For each aligned structure, only atoms within a cubic box centered at a user-specified coordinate are retained.
-The box size is fixed at 20 × 20 × 20 Å, corresponding to ±10 Å along each Cartesian axis. 
+The box size is set as 20 × 20 × 20 Å. 
 
 1.3 Output generation
 
-The cropped active-site structures are saved in PDB format to: **data/activesite/**
+The cropped active-site structures are saved in PDB format in: `data/activesite/`
 
 
 **Step 2. Feature Generation**
@@ -87,8 +87,9 @@ python scripts/training.py \
 
 <LABEL_COLUMN>: the column name in your CSV that contains the target property for regression.
 
-**Step 4. Prediction on New Variants**
-Prepare the input files like the operation in Step2. Predict properties for new sequences and structures:
+**Step 4. Prediction properties for new sequences and structures**
+
+Prepare the input files like the operation in Step2. 
 
 ```
 python scripts/prediction.py \
@@ -98,7 +99,7 @@ python scripts/prediction.py \
     --model models/rf_model.joblib
 ```
 
-Predicted values will be saved to outputs-test/predictions.csv
+Predicted values are saved to outputs-test/predictions.csv
 
 **Directory Structure**
 
@@ -126,3 +127,4 @@ Jiahui Zhou (jiahui.zhou@qub.ac.uk) Queen's University Belfast, UK
 
 Meilan Huang (m.huang@qub.ac.uk) Queen's University Belfast, UK
 
+https://www.huanggroup.co.uk/
