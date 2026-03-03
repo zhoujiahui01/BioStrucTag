@@ -9,18 +9,6 @@ The number of possible mutants increases exponentially as the number of mutable 
 **Find more AI tools in our enzyme design platform (LEAD-Zyme): https://www.greencatalysis.co.uk/lead-zyme**
 
 
-# Required Dependencies
-This package is tested with Python 3.10.16 and CUDA 12.8 on Ubuntu 22.04.
-- Python 3.10
-- PyTorch 2.6.0
-- Transformers 4.51.3
-- pyuul 0.4.2
-- scikit-learn 1.6.1
-- pandas 2.2.3
-- numpy 1.26.4
-- tensorflow 2.18.0
-- joblib 1.4.2
-- tqdm 4.67.1
   
 # Usage
 **Step 1. Preparation**
@@ -122,9 +110,3 @@ BioStrucTag/
 └─ scripts/              # all Python scripts
 ```
 
-# Contact
-Jiahui Zhou (jiahui.zhou@qub.ac.uk) Queen's University Belfast, UK
-
-Meilan Huang (m.huang@qub.ac.uk) Queen's University Belfast, UK
-
-https://www.huanggroup.co.uk/
