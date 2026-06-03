@@ -121,3 +121,7 @@ BioStrucTag/
 └─ scripts/              # all Python scripts
 ```
 
+Related work:
+```
+Lu, Z, Zhou, J, Han, T, Zhang, Z, Xu, W*, Cen, Y*, Jiang, C, Zhang, J, Guo, X, Cao, C, Huang, M* & Wu, Q*, Precisely accessing all possible stereoisomers of chiral alcohols with multiple 1 stereocenters enabled by machine learning-empowered protein engineering, 2026 Nature Synthesis. In press
+```
